@@ -1,0 +1,12 @@
+
+ # Module configuration
+module.tx_widgetview {
+	persistence {
+		storagePid = {$module.tx_widgetview.persistence.storagePid}
+	}
+	view {
+		templateRootPath = {$module.tx_widgetview.view.templateRootPath}
+		partialRootPath = {$module.tx_widgetview.view.partialRootPath}
+		layoutRootPath = {$module.tx_widgetview.view.layoutRootPath}
+	}
+}

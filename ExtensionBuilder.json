@@ -1,0 +1,48 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Widget => index,filter"
+                },
+                "description": "",
+                "key": "beview",
+                "mainModule": "web",
+                "name": "Widget Viewer",
+                "tabLabel": "Widget Viewer"
+            }
+        ],
+        "description": "Adds a widget view in the backend that enhances the old List view",
+        "emConf": {
+            "category": "module",
+            "custom_category": "",
+            "dependsOn": "typo3 => 6.2\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "6.2",
+            "version": "0.0.1"
+        },
+        "extensionKey": "widget_view",
+        "name": "Backend Widget View",
+        "originalExtensionKey": "",
+        "persons": [
+            {
+                "company": "PixelPlant",
+                "email": "radu.mogos@pixelplant.ch",
+                "name": "Radu Mogos",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [],
+        "vendorName": "Pixelplant"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2015-03-22 10:50",
+        "extension_builder_version": "6.2.0",
+        "be_user": " (1)"
+    }
+}
