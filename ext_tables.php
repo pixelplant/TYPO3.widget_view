@@ -10,11 +10,11 @@ if (TYPO3_MODE === 'BE') {
 	 */
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
 		'Pixelplant.' . $_EXTKEY,
-		'web',	 // Make module a submodule of 'web'
+		'web',	    // Make module a submodule of 'web'
 		'beview',	// Submodule key
-		'',						// Position
+		'after:list',			// Position
 		array(
-			'Widget' => 'index, filter',
+			'Widget' => 'index,filter',
 		),
 		array(
 			'access' => 'user,group',

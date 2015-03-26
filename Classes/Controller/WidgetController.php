@@ -1,5 +1,5 @@
 <?php
-namespace Pixelplant\WidgetView\Controller\Backend;
+namespace Pixelplant\WidgetView\Controller;
 
     /**
      * This file is part of the TYPO3 CMS project.
@@ -14,12 +14,24 @@ namespace Pixelplant\WidgetView\Controller\Backend;
      * The TYPO3 project - inspiring people to share!
      */
 
+use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+
 /**
  * Main backend controller
  */
 class WidgetController extends ActionController {
 
     public function indexAction() {
+        $pid = GeneralUtility::_GP('id');
+        $rows = array();
+        foreach ($GLOBALS['TCA'] as $table => $tca) {
+            $res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*', $table, "pid = $pid");
+            while ($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
+                $rows[] = $row;
+            }
+        }
 
+        $this->view->assign('rows', $rows);
     }
 }
